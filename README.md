@@ -1,27 +1,24 @@
 
 
 <h1 align="center">
-     Nome do Site
+     Labook
 </h1>
 
 <h4 align="left">
-    Slogan do Projeto. Fazer um texto curto sobre o que é o projeto.
+    A rede social que dominou o mundo.
 </h4>
 
 ---
 
 ##  🕵Sobre
 
-Escrever de forma sucinta sobre o que é o seu projeto. Por exemplo, se você está fazendo uma Pokedéx pode escrever : Aplicação com intuito de criar uma pokedéx, site onde você pode ver os detalhes dos pokemóns e montar a sua equipe.
+Aplicação com o intuito de criar um backend para uma rede social baseada em usuários, posts e amizades.
 
 ---
 
 ##  👩🏾Quem Faz 
 
-- ~~COLOCAR O NOME DAS PESSOAS AUTORAS DO PROJETO~~
-- PESSOA 1
-- PESSOA 2
-- PESSOA 3
+- @sterx17
 
 ---
 ##  🔠Conteúdos
@@ -42,73 +39,67 @@ Escrever de forma sucinta sobre o que é o seu projeto. Por exemplo, se você es
 ---
 ##  🧭Status do Projeto
 
-~~COLOCAR AQUI O STATUS DO PROJETO. ALÉM DISSO, VOCÊ PODE COLOCAR QUAL PARTE VOCÊ ESTÁ DESENVOLVENDO (ESTILIZAÇÃO, RESPONSIVIDADE, ETC...)~~
-
- - ⏳ Fazendo
- - 📥 Testando 
  - ⌛ Feito
 
 ---
 
 ##  🎯Objetivo do Projeto
 
-Este é um projeto de Back-end | Front-end | Full-Stack , desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender : ~~COLOCAR AQUI QUAIS SÃO OS CONCEITOS  E TECNOLOGIAS QUE VOCÊ ESTAVA FOCADO EM ESTUDAR, AO REALIZAR ESSE PROJETO~~. 
-
-~~EXEMPLO:~~
-
-- Este é um projeto de Back-end , desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender :  Diferença entre banco de dados relacionais e não relacionais ; MySQL ; Criação de Query.
-
+Este é um projeto de Back-end, desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender: Arquitetura baseada em camadas e o paradigma de Orientação à Objetos
 
 
 ## ☑️Requisitos de Funcionalidade
 
-- [x] Funcionalidade 1
-- [ ] Funcionalidade 2
-- [ ] Funcionalidade 3
-- [ ] Funcionalidade 4
+**Endpoints a se organizar:**
 
-Além das funcionalidades, aqui você pode por Prints e gifs do seu projeto, como ele funciona.
+- [v] Cadastrar novos usuários
+- [v] Criar novos posts
+- [v] Buscar post por ID
 
+**Endpoints a se criar:**
+
+- [v] Linkar dois usuários por uma amizade
+- [v] Desfazer uma amizade
+- [v] Ver o feed de amigos em ordem do mais recente
+
+**Desafios:**
+
+- [x] Ver apenas um tipo de post (normal ou evento)
+- [x] Curtir Post
+- [x] Descurtir Post
+- [x] Comentar Post
+- [x] Paginar o Feed
 
 ---
 
 ## 💡Concepção do Projeto
 
-- **Wireframe do Projeto:** ~~COLOCAR AQUI O WIREFRAME "ESBOÇO" DO PROJETO~~
-- **Link do Figma:** ~~COLOCAR AQUI O LINK DO FIGMA | LINK DO ADOBE XD | LINK DO WIREFRAME (FRONT-END)~~
-- **Modelagem do Banco de Dados :** ~~COLOCAR AQUI OS DIAGRAMAS DE MODELAGEM DO BANCO DE DADOS E EXPLICAR UM POUCO SOBRE~~ . 
+Esse projeto já possua duas tabelas criadas, por isso só foi necessário acrescentar mais uma: `labook_friendships`. Abaixo, suas características:
 
-EXEMPLO: 
-
-Para esse projeto são modelados três entidades : **Estudante (STUDENT), Professor (TEACHER)** e **Turma(CLASS)**.  Cada um com as seguintes caracteristicas :
-
-→ Estudante -  id, nome, email, data de nascimento e os principais hobbies;
-
-→ Professor - id, nome, email, data de nascimento e todas as especialidades ;
-
-→ Classe - id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
-
-![Untitled](https://user-images.githubusercontent.com/52434685/120907206-16eb8700-c636-11eb-936f-d5212a4c5a36.png)
+→ id: VARCHAR(255) PK
+→ fk_friendship_requester: VARCHAR(255) FK de Users
+→ fk_friendship_receiver: VARCHAR(255) FK de Users
+→ created_at: DATE (timestamp)
 
 
 ---
 
-## 🔗Link para Acessar
+## 🔗Link para Acessar a API
 
-- **Link do Surge:** ~~COLOCAR AQUI O LINK DO SURGE~~
+- **Link do Render:** https://labook.onrender.com/
+
 
 ---
 
 
 ## 🛰Rodando o Projeto
 
-~~EXPLICAR AQUI O PASSO A PASSO PARA CONSEGUIR RODAR E ACESSAR O PROJETO.~~
+Para Rodar o projeto, siga as seguintes etapas:
 
-Para Rodar o projeto, siga as seguintes etapas :
-
-- COLOCAR A ETAPA 1
-- COLOCAR A ETAPA 2
-- COLOCAR A ETAPA 3
+- Rode `npm i` para instalar as dependências
+- Adicione seu arquivo .env e seus dados de conexão com o banco
+- Rode `npm run migrations` para criar as tabelas em seu banco
+- Use `npm start` para rodar o servidor.
 
 
 ---
